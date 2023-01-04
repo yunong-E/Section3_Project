@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인번호 당첨을 축하합니다!</title> 
+</head>
+<body>
+        <h1>축하합니다! 당신은 당첨자가 될 것 입니다!</h1>
+        <b>{{id}}회</b>의 예상 조 번호는 <b>{{y_pred1}}</b> 이며, <br>
+        나머지 여섯 번호는 <b>{{y_pred2}}, {{y_pred3}}, {{y_pred4}}, {{y_pred5}}, {{y_pred6}}, {{y_pred7}}</b>입니다! <br>
+        미리 축하드립니다!
+
+        <br>
+        <br>
+        <div class="text-left">
+            <img src="{{ url_for('static', filename='img/money.png')}}" class="img-thumbnail" alt="행운" style="width:200px; height:200px;">
+          </div>
+        <a href="http://127.0.0.1:5000">메인 화면으로 Go!</a>
+
+    <div>
+        <p>
+            {% if id == None %}
+                <h5> 아직 아무 숫자도 입력이 안되었습니다. </h5>
+            {% endif %}
+        </p>
+    </div>
+</body>
+</html>

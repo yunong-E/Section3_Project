@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연금복권 번호 예측 사이트</title> 
+</head>
+<body>
+
+   
+    <form method = 'POST' action='/login'>
+        회원님의 성합을 입력해주세요!<br>     
+        <input type='TEXT' id="name" Size = '20'>
+        <input type='button' value='확인' onclick='alert("안녕하세요")'>
+        
+    </form>
+    <div>
+        <p>
+            {% if name == None %}
+                <h5> 아직 아무 숫자도 입력이 안되었습니다. </h5>
+            {% endif %}
+        </p>
+    </div>
+</body>
+</html>
